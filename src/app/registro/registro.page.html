@@ -1,0 +1,33 @@
+<ion-content>
+  <div class="container">
+    <div class="header">
+      <div class="title">
+        <img src="https://image.flaticon.com/icons/png/512/149/149071.png">
+      </div>
+      <h3>Bienvenido!</h3>
+      <p>Registrese para obtener una cuenta</p>
+    </div>
+    <div class="body">
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked" > Nombre </ion-label>
+          <ion-input type="text" [(ngModel)]="name" name="name" required="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" > Correo electrónico </ion-label>
+          <ion-input type="text" [(ngModel)]="email" name="email" required="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" > Contraseña </ion-label>
+      <ion-input [(ngModel)]="password" type="password" name="password" required="true"></ion-input>
+        </ion-item>
+      
+      </ion-list>
+      <div class="footer">
+        <a routerLink="/login">Registrar</a>
+      </div>
+      
+    </div>
+    
+  </div>
+</ion-content>
