@@ -4,6 +4,8 @@ import { Router } from "@angular/router";
 import { AngularFirestore } from "@angular/fire/firestore";
 import{GooglePlus}from "@ionic-native/google-plus/ngx";
 import { auth } from 'firebase';
+import { resolve } from 'url';
+import{promise} from "protractor"
 
 @Injectable({
   providedIn: 'root'
@@ -30,23 +32,14 @@ export class AuthService {
     })
   }
 
-  register(email : string, password : string, name : string){
-
-    return new Promise ((resolve, reject) => {
-      this.AFauth.auth.createUserWithEmailAndPassword(email, password).then( res =>{
-          // console.log(res.user.uid);
-        const uid = res.user.uid;
-          this.db.collection('users').doc(uid).set({
-            name : name,
-            uid : uid
-          })
-        
+  register(email : string, password : string){
+    return new Promise((resolve,reject) => {
+      this.AFauth.auth.createUserWithEmailAndPassword(email, password).then(res =>{
         resolve(res)
-      }).catch( err => reject(err))
+      }).catch(err => reject(err))
     })
-    
-
   }
+
   loginWithGoogle(){
       return this.google.login({}).then(result=>{
         const userDataGoogle = result;

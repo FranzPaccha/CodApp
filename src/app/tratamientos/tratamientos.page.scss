@@ -1,0 +1,41 @@
+ion-content{
+    --background: rgb(190, 199, 216);
+}
+h5{
+    text-align: center;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+h1{
+    text-align: center;
+    color: rgb(70, 63, 95);
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 110%;
+}
+h2{
+    color: rgb(53, 53, 53);
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: sans-serif;
+    font-size: 90%;
+    font-style: italic;
+    text-align: justify;
+}  
+ion-button{
+    color: darken($color: #000000, $amount: 0);
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+h4{
+    color: rgb(53, 53, 53);
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: sans-serif;
+    font-size: 90%;
+    font-style: italic;
+    text-align: justify;
+    background: dark;
+}
